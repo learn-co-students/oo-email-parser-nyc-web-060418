@@ -2,3 +2,21 @@
 # emails. The parse method on the class should separate them into
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
+
+require 'pry'
+class EmailParser 
+  
+  attr_accessor :email_address
+  @@emails = []
+  def initialize(email_address)
+    @email_address = email_address 
+    @@emails << self
+  end 
+  
+  def parse(emails)
+    p email = emails.split(", ")
+    binding.pry
+  end 
+  
+  
+end 
